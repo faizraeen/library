@@ -1,0 +1,16 @@
+{
+  "name": "librachain",
+  "version": "1.0.0",
+  "description": "LibraChain – Decentralized Library Management System",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "seed": "npm --prefix server run seed",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"green,blue\" \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
